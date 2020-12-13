@@ -26,10 +26,11 @@ public class SignUpForm {
     @Size(min=3, max = 20)
     private String phone;
 
-
     @NotBlank
     @Size(min=6, max = 100)
     private String password;
+
+    private Set<String> role;
 
     public String getName() {
         return name;
@@ -62,10 +63,6 @@ public class SignUpForm {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    private Set<String> role;
-
-
 
     public Set<String> getRole() {
         return role;

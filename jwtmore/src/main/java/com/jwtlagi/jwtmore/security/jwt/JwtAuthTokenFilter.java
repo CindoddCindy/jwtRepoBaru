@@ -1,9 +1,7 @@
 package com.jwtlagi.jwtmore.security.jwt;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 
 import com.jwtlagi.jwtmore.security.services.UserDetailServiceImpl;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -25,7 +23,7 @@ public class JwtAuthTokenFilter extends OncePerRequestFilter {
     @Autowired
     private UserDetailServiceImpl userDetailsService;
 
-    private static final Logger logger = (Logger) LoggerFactory.getLogger(JwtAuthTokenFilter.class);
+    private static final Logger logger = LoggerFactory.getLogger(JwtAuthTokenFilter.class);
 
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {

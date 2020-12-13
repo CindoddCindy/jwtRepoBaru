@@ -39,8 +39,6 @@ import org.hibernate.annotations.NaturalId;
                 "email"
         })
 })
-
-
 public class User {
 
     @Id
@@ -61,7 +59,6 @@ public class User {
     @Size(min=3, max = 20)
     private String phone;
 
-
     @NotBlank
     @Size(min=6, max = 100)
     private String password;
@@ -71,8 +68,6 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
-
-
 
     public User() {
     }
